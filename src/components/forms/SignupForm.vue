@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import PinkButton from '@/components/ui/buttons/PinkButton.vue';
 import AppInput from '@/components/ui/forms/AppInput.vue';
 import AppDivider from '@/components/ui/AppDivider.vue';
@@ -68,7 +68,7 @@ export default {
 			}
 
 			if (this.errors.length > 0) {
-				console.log(this.errors)
+				console.log(this.errors);
 				return;
 			}
 
