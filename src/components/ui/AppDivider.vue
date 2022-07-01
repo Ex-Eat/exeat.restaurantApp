@@ -1,13 +1,11 @@
-<script>
+<script lang="ts">
 export default {
-    name: "AppDivider"
-}
+	name: 'AppDivider',
+};
 </script>
 
 <template>
-    <div class="h-[1px] w-100 bg-gray-300"></div>
+	<div class="h-[1px] w-100 bg-gray-300"></div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

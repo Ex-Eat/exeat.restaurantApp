@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 export default {
 	name: 'AppInput',
 	props: {
@@ -45,7 +45,9 @@ export default {
 			class="absolute left-[17px] top-[12px] cursor-text px-1 bg-white text-sm text-gray-500"
 			>{{ label }}</label
 		>
-		<p v-if="helperText" class="text-xs text-gray-500 ml-5 my-1" :class="{ 'text-red-500': error }">{{ helperText }}</p>
+		<p v-if="helperText" class="text-xs text-gray-500 ml-5 my-1" :class="{ 'text-red-500': error }">
+			{{ helperText }}
+		</p>
 	</div>
 </template>
 

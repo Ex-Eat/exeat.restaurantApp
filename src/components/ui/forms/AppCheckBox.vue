@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 export default {
 	name: 'AppCheckBox',
 	props: {
@@ -9,7 +9,7 @@ export default {
 		label: String,
 		required: {
 			type: Boolean,
-			default: false
+			default: false,
 		},
 	},
 };
@@ -18,14 +18,19 @@ export default {
 <template>
 	<div class="ml-4 my-2">
 		<label class="pure-material-checkbox z-0 relative flex flex-row text-sm leading-6 text-gray-500">
-			<input type="checkbox" v-model="checked" class="appearance-none" :required="required" @change="this.$emit('update:checked', $event.target.checked)" />
+			<input
+				type="checkbox"
+				v-model="checked"
+				class="appearance-none"
+				:required="required"
+				@change="this.$emit('update:checked', $event.target.checked)"
+			/>
 			<span>{{ label }}</span>
 		</label>
 	</div>
 </template>
 
 <style scoped>
-
 /* Input */
 .pure-material-checkbox > input {
 	z-index: -1;
@@ -85,13 +90,13 @@ export default {
 /* Checked, Indeterminate */
 .pure-material-checkbox > input:checked,
 .pure-material-checkbox > input:indeterminate {
-	background-color: #C86556;
+	background-color: #c86556;
 }
 
 .pure-material-checkbox > input:checked + span::before,
 .pure-material-checkbox > input:indeterminate + span::before {
-	background-color: #C86556;
-	border-color: #C86556;
+	background-color: #c86556;
+	border-color: #c86556;
 }
 
 .pure-material-checkbox > input:checked + span::after,
